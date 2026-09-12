@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Chakra Petch", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-void: #030303;
+  --color-charcoal: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-2: #161616;
+  --color-crimson: #e10600;
+  --color-crimson-bright: #ff1a1a;
+  --color-crimson-deep: #8b0000;
+  --color-line: rgba(255,255,255,0.08);
+  --color-line-red: rgba(220,0,0,0.28);
+  --color-ink: #ffffff;
+  --color-ash: #9a9a9a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-crimson);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-crimson-bright);
+  outline-offset: 3px;
+}
+
+/* thin custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #2a0a0a; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-crimson-deep); }
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.22; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.34; transform: translateX(-50%) scale(1.08); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+.animate-scan {
+  animation: scan 6s linear infinite;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(12px, -18px); }
+  100% { transform: translate(0, 0); }
+}
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+/* Layer 06 — slow scanline sweep used inside CyberBackground */
+@keyframes cyber-scan-sweep {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.cyber-scan-sweep {
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: cyber-scan-sweep 9s linear infinite;
+}
+
+/* Layer 08 — occasional diagonal threat-scanner beam, mostly idle */
+@keyframes cyber-threat-beam {
+  0%, 82% { transform: translate3d(-30%, -40%, 0) rotate(18deg); opacity: 0; }
+  86% { opacity: 0.5; }
+  94% { opacity: 0.15; }
+  100% { transform: translate3d(130%, 60%, 0) rotate(18deg); opacity: 0; }
+}
+.cyber-threat-beam::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-crimson-bright), transparent);
+  filter: blur(2px);
+  animation: cyber-threat-beam 16s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* Cinematic blur-to-sharp reveal, used by Reveal.tsx */
+@keyframes blur-in {
+  from { opacity: 0; filter: blur(14px); transform: translateY(24px) scale(0.98); }
+  to { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+}
+
+/* Sparing glitch effect for brand-moment headings only */
+@keyframes glitch-slice {
+  0%, 92%, 100% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+  93% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 0); }
+  94% { clip-path: inset(60% 0 5% 0); transform: translate(2px, 0); }
+  95% { clip-path: inset(30% 0 40% 0); transform: translate(-1px, 0); }
+  96% { clip-path: inset(0 0 0 0); transform: translate(0, 0); }
+}
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  animation: glitch-slice 7s infinite;
+}
+.glitch-text::before {
+  color: var(--color-crimson-bright);
+  animation-delay: 0.15s;
+  z-index: -1;
+}
+.glitch-text::after {
+  color: #ffffff;
+  opacity: 0.7;
+  animation-delay: -0.15s;
+  z-index: -2;
+}
+@media (prefers-reduced-motion: reduce) {
+  .glitch-text::before,
+  .glitch-text::after,
+  .cyber-scan-sweep,
+  .cyber-threat-beam::before {
+    animation: none;
+    content: none;
+  }
+}

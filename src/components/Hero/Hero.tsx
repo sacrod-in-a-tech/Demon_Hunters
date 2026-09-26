@@ -55,10 +55,10 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3"
           >
-            <span className="h-px w-8 bg-[var(--color-crimson)]" />
-            <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.35em] text-[var(--color-crimson-bright)]">
+            {/* <span className="h-px w-8 bg-[var(--color-crimson)]" /> */}
+            {/* <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.35em] text-[var(--color-crimson-bright)]">
               CYBERSECURITY COMMAND // SYSTEM ONLINE
-            </span>
+            </span> */}
           </motion.div>
 
           <h1 className="mt-6 font-[family-name:var(--font-display)] text-[15vw] font-semibold uppercase leading-[0.85] text-white sm:text-7xl md:text-8xl lg:text-8xl">
@@ -148,8 +148,8 @@ export default function Hero() {
         transition={{ delay: 1.3, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
       >
-        <span className="font-[family-name:var(--font-display)] text-[10px] tracking-[0.3em] text-[var(--color-ash)]">SCROLL</span>
-        <div className="h-10 w-px bg-gradient-to-b from-[var(--color-crimson)] to-transparent" />
+        {/* <span className="font-[family-name:var(--font-display)] text-[10px] tracking-[0.3em] text-[var(--color-ash)]">SCROLL</span> */}
+        {/* <div className="h-10 w-px bg-gradient-to-b from-[var(--color-crimson)] to-transparent" /> */}
       </motion.div>
     </section>
   )

@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom'
 import Reveal from '../shared/Reveal'
 import TiltCard from '../shared/TiltCard'
 import SectionHeading from '../shared/SectionHeading'
-import { posts } from '../../data/content'
+import { posts } from '../../data/blogPosts'
 
 export default function Blog() {
   return (
     <section id="blog" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-          <SectionHeading eyebrow="FROM THE COMMUNITY" title="Latest From the Hunt" />
+          <SectionHeading title="Latest From the Hunt" />
           <Reveal delay={0.1}>
             <Link
               to="/blog"

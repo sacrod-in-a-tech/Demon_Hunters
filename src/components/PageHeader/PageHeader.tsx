@@ -12,10 +12,10 @@ export default function PageHeader({ eyebrow, title, description }: PageHeaderPr
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <Reveal>
           <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-[var(--color-crimson)]" />
+            {/* <span className="h-px w-8 bg-[var(--color-crimson)]" />
             <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.3em] text-[var(--color-crimson-bright)]">
               {eyebrow}
-            </span>
+            </span> */}
           </div>
         </Reveal>
         <Reveal delay={0.08}>

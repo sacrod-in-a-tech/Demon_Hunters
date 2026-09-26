@@ -6,7 +6,7 @@ export const navItems = [
   { label: 'Research', to: '/research' },
   { label: 'Blog', to: '/blog' },
   { label: 'History', to: '/history' },
-  { label: 'Contact', to: '/contact' },
+  // { label: 'Contact', to: '/contact' },
 ]
 
 // Security capabilities / approach — used on the About page.
@@ -73,40 +73,10 @@ export const researchAreas = [
 
 export const disclosureSteps = ['DISCOVER', 'ANALYZE', 'REPORT', 'PROTECT']
 
-export const posts = [
-  {
-    category: 'Web Security',
-    title: 'Understanding Modern Web Vulnerabilities',
-    description: 'A look at how attack surfaces on modern web applications have shifted, and what still gets missed.',
-    date: 'Static Preview',
-    tag: 'web-security',
-  },
-  {
-    category: 'Mindset',
-    title: 'The Mindset Behind Security Research',
-    description: 'What separates methodical vulnerability research from guesswork, and why patience wins.',
-    date: 'Static Preview',
-    tag: 'mindset',
-  },
-  {
-    category: 'Competitive Security',
-    title: 'How CTFs Build Practical Security Skills',
-    description: 'Why capture-the-flag competitions remain one of the fastest ways to build real offensive skill.',
-    date: 'Static Preview',
-    tag: 'ctf',
-  },
-  {
-    category: 'Disclosure',
-    title: 'Inside a Vulnerability Report',
-    description: 'What responsible disclosure actually looks like, from discovery to fix confirmation.',
-    date: 'Static Preview',
-    tag: 'disclosure',
-  },
-]
-
 export const socials = [
-  { label: 'GitHub', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Instagram', href: '#' },
-  { label: 'X', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/bytherix' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bytherix-technology-84b660420/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/bytherix_/?__pwa=1' },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591150259850' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@Bytherix_Technology' },
 ]

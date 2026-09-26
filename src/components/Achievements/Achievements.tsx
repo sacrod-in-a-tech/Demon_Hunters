@@ -14,7 +14,7 @@ export default function Achievements() {
     <section id="research" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
-          <SectionHeading eyebrow="RESEARCH" title="Focus Areas" />
+          <SectionHeading title="Focus Areas" />
           <Reveal delay={0.1}>
             <div className="flex items-baseline gap-3 border-l border-[var(--color-line-red)] pl-4">
               <span className="font-[family-name:var(--font-display)] text-4xl font-semibold text-white">{totalEvents}</span>

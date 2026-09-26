@@ -10,10 +10,10 @@ export default function About() {
         <div>
           <Reveal y={-16}>
             <div className="flex items-center gap-3">
-              <span className="h-px w-8 bg-[var(--color-crimson)]" />
+              {/* <span className="h-px w-8 bg-[var(--color-crimson)]" />
               <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.3em] text-[var(--color-crimson-bright)]">
                 WHO WE ARE
-              </span>
+              </span> */}
             </div>
           </Reveal>
           <Reveal delay={0.08} y={-16}>

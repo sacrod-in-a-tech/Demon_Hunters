@@ -55,9 +55,9 @@ export default function Contact() {
   return (
     <>
       <PageHeader
-        eyebrow="GET IN TOUCH"
+        // eyebrow="GET IN TOUCH"
         title="Contact"
-        description="Have a question, a lead, or a collaboration in mind? Send the Demon Hunters team a message."
+        description="Connect with Demon Hunters, a cybersecurity initiative under Bytherix Technology, driven by research, exploration, and the pursuit of a more secure digital world."
       />
 
       <section className="relative py-20">

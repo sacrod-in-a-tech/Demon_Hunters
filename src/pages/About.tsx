@@ -23,7 +23,7 @@ export default function About() {
   return (
     <>
       <PageHeader
-        eyebrow="WHO WE ARE"
+        // eyebrow="WHO WE ARE"
         title="About Demon Hunters"
         description="Demon Hunters is a cybersecurity-focused community built around curiosity, technical excellence, collaboration, and continuous learning."
       />

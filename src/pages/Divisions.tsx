@@ -7,7 +7,7 @@ export default function Divisions() {
   return (
     <>
       <PageHeader
-        eyebrow="ORGANIZATION"
+        // eyebrow="ORGANIZATION"
         title="Divisions"
         description="Demon Hunters is organized into six specialized technical divisions. Select one to see who's assigned to it."
       />

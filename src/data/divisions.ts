@@ -1,8 +1,6 @@
-// Centralized, authoritative Demon Hunters org data.
-// Do not hardcode member lists anywhere else — everything (Hunters page,
-// Divisions page, previews, filters) reads from this single source.
-
 export const LEADER_NAME = 'Anish Parajuli'
+
+export type HunterGender = 'male' | 'female'
 
 export interface Division {
   id: string
@@ -51,7 +49,12 @@ export const divisions: Division[] = [
     name: 'Digital Forensics',
     shortName: 'Digital Forensics',
     captain: 'Prabind Kuram Mahato',
-    members: ['Abiral Timalsina', 'Sulakshan Thapa', 'Rahul Chaudhary', 'Payal Chaudhary'],
+    members: [
+      'Abiral Timalsina',
+      'Sulakshan Thapa',
+      'Rahul Chaudhary',
+      'Payal Chaudhary',
+    ],
     description:
       'Reconstructing what happened from what was left behind — disk images, memory dumps, logs, and digital artifacts.',
   },
@@ -60,8 +63,13 @@ export const divisions: Division[] = [
     number: '05',
     name: 'OSINT (Blue Team)',
     shortName: 'OSINT (Blue Team)',
-    captain: null,
-    members: ['Lokendra Thapa Kshetri', 'Sajjan Adhikari', 'Adesh Pun', 'Alisha Rokka', 'Om Prakash Shah'],
+    captain: 'Lokendra Thapa Kshetri',
+    members: [
+      'Sajjan Adhikari',
+      'Adesh Pun',
+      'Alisha Rokka',
+      'Om Prakash Shah',
+    ],
     description:
       'Open-source intelligence and defensive monitoring — mapping exposure and watching for what the offense would exploit.',
   },
@@ -83,13 +91,36 @@ export interface Hunter {
   divisionName: string
   isCaptain: boolean
   isLeader: boolean
+  gender: HunterGender
 }
 
-// Flattened, deduplicated roster derived directly from `divisions`.
-// Anish Parajuli appears exactly once — captain of Reverse Engineering,
-// flagged separately as the overall leader.
+const genderByName: Record<string, HunterGender> = {
+  'Nikesh Munikar': 'male',
+  'Sudip KC': 'male',
+  'Utsav Rai': 'male',
+  'Nimesh Gurung': 'male',
+
+  'Anish Parajuli': 'male',
+
+  'Anjit Paswan': 'male',
+  'Jenish Maharjan': 'male',
+
+  'Prabind Kuram Mahato': 'male',
+  'Abiral Timalsina': 'male',
+  'Sulakshan Thapa': 'male',
+  'Rahul Chaudhary': 'male',
+  'Payal Chaudhary': 'female',
+
+  'Lokendra Thapa Kshetri': 'male',
+  'Sajjan Adhikari': 'male',
+  'Adesh Pun': 'male',
+  'Alisha Rokka': 'female',
+  'Om Prakash Shah': 'male',
+}
+
 export const hunters: Hunter[] = divisions.flatMap((division) => {
   const entries: Hunter[] = []
+
   if (division.captain) {
     entries.push({
       name: division.captain,
@@ -97,29 +128,40 @@ export const hunters: Hunter[] = divisions.flatMap((division) => {
       divisionName: division.name,
       isCaptain: true,
       isLeader: division.captain === LEADER_NAME,
+      gender: genderByName[division.captain] ?? 'male',
     })
   }
-  division.members.forEach((name) => {
-    entries.push({
-      name,
-      divisionId: division.id,
-      divisionName: division.name,
-      isCaptain: false,
-      isLeader: false,
+
+  division.members
+    .filter((name) => name !== division.captain)
+    .forEach((name) => {
+      entries.push({
+        name,
+        divisionId: division.id,
+        divisionName: division.name,
+        isCaptain: false,
+        isLeader: false,
+        gender: genderByName[name] ?? 'male',
+      })
     })
-  })
+
   return entries
 })
 
-export const leader = hunters.find((h) => h.isLeader) ?? null
+export const leader = hunters.find((hunter) => hunter.isLeader) ?? null
 
 export function getDivisionById(id: string | null): Division | undefined {
-  return divisions.find((d) => d.id === id)
+  return divisions.find((division) => division.id === id)
 }
 
-export function getHuntersByDivision(divisionId: string | 'all'): Hunter[] {
-  if (divisionId === 'all') return hunters
-  return hunters.filter((h) => h.divisionId === divisionId)
+export function getHuntersByDivision(
+  divisionId: string | 'all',
+): Hunter[] {
+  if (divisionId === 'all') {
+    return hunters
+  }
+
+  return hunters.filter((hunter) => hunter.divisionId === divisionId)
 }
 
 export const totalHunters = hunters.length

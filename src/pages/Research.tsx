@@ -8,7 +8,7 @@ export default function Research() {
   return (
     <>
       <PageHeader
-        eyebrow="RESEARCH"
+        // eyebrow="RESEARCH"
         title="Security Research"
         description="Demon Hunters focuses its research energy on practical, testable security work — competitive, independent, and community-facing."
       />

@@ -1,7 +1,7 @@
 # Demon Hunters — Website
 
 Static React + TypeScript + Vite + Tailwind CSS v4 + Framer Motion site.
-
+<!-- 
 ## Run locally
 
 ```
@@ -30,4 +30,4 @@ src/
 
 Colors, type scale and shared background system live in `src/index.css`
 under the `@theme` block, and in `AnimatedBackground`/`Reveal`/`SectionHeading`
-in `src/components/shared` and `src/components/AnimatedBackground`.
+in `src/components/shared` and `src/components/AnimatedBackground`. -->

@@ -12,7 +12,7 @@ export default function BlogArticle() {
       <main className="relative min-h-screen overflow-hidden bg-black text-white">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(130,0,0,0.18),transparent_40%)]" />
 
-        <section className="relative mx-auto flex min-h-screen max-w-5xl items-center px-6 py-32 lg:px-10">
+        <section className="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div>
             <p className="font-[family-name:var(--font-display)] text-[10px] tracking-[0.3em] text-[var(--color-crimson-bright)]">
               ERROR 404
@@ -48,7 +48,7 @@ export default function BlogArticle() {
         <div className="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-red-950/10 blur-[140px]" />
       </div>
 
-      <article className="relative mx-auto max-w-6xl px-5 pb-24 pt-28 sm:px-8 sm:pt-32 lg:px-10 lg:pb-32">
+      <article className="relative mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 sm:pt-24 lg:px-8 lg:pb-24 lg:pt-28">
         <Link
           to="/blog"
           className="group inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-[10px] tracking-[0.2em] text-[var(--color-ash)] transition-colors duration-300 hover:text-white"
@@ -57,7 +57,7 @@ export default function BlogArticle() {
           BACK TO BLOG
         </Link>
 
-        <header className="mt-12 max-w-5xl">
+        <header className="mt-8 max-w-5xl sm:mt-10">
           <div className="flex flex-wrap items-center gap-3">
             <span className="border border-[var(--color-crimson-bright)]/40 bg-[var(--color-crimson)]/10 px-3 py-1.5 font-[family-name:var(--font-display)] text-[9px] tracking-[0.25em] text-[var(--color-crimson-bright)]">
               {post.category.toUpperCase()}
@@ -68,7 +68,7 @@ export default function BlogArticle() {
             </span>
           </div>
 
-          <h1 className="mt-7 max-w-5xl font-[family-name:var(--font-display)] text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-5xl font-[family-name:var(--font-display)] text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             {post.title}
           </h1>
 
@@ -157,7 +157,7 @@ export default function BlogArticle() {
               })}
             </div>
 
-            <div className="mt-16 border-t border-[var(--color-line)] pt-8">
+            <div className="mt-10 border-t border-[var(--color-line)] pt-8">
               <Link
                 to="/blog"
                 className="group inline-flex items-center gap-3 font-[family-name:var(--font-display)] text-[10px] tracking-[0.2em] text-white transition-colors duration-300 hover:text-[var(--color-crimson-bright)]"

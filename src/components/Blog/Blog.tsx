@@ -6,8 +6,8 @@ import { posts } from '../../data/blogPosts'
 
 export default function Blog() {
   return (
-    <section id="blog" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="blog" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading title="Latest From the Hunt" />
           <Reveal delay={0.1}>
@@ -21,7 +21,7 @@ export default function Blog() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4">
           {posts.map((post, i) => (
             <Reveal key={post.title} delay={i * 0.08}>
               <TiltCard maxTilt={3} className="h-full">

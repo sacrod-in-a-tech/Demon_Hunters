@@ -14,8 +14,8 @@ import { history, totalEvents, yearsActive } from '../data/history'
 function HistoryPreview() {
   const latest = history[0]
   return (
-    <section className="relative border-t border-[var(--color-line)] py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section className="relative border-t border-[var(--color-line)] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="HISTORY"
@@ -33,7 +33,7 @@ function HistoryPreview() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
           {latest.events.slice(0, 6).map((event, i) => (
             <Reveal key={event} delay={i * 0.05} y={12} blur={false}>
               <div className="flex items-center gap-4 border border-[var(--color-line)] px-5 py-4 transition-colors duration-300 hover:border-[var(--color-line-red)]">

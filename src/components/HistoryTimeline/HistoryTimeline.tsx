@@ -36,7 +36,7 @@ export default function HistoryTimeline() {
         })}
       </div>
 
-      <div className="relative mt-14">
+      <div className="relative mt-8 lg:mt-10">
         <div
           className="absolute left-[7px] top-2 bottom-2 w-px bg-[var(--color-line)] sm:left-[9px]"
           aria-hidden="true"

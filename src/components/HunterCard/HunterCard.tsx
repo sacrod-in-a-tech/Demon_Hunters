@@ -5,12 +5,12 @@ import femaleAvatar from '../../assets/female.jpg'
 
 interface HunterCardProps {
   hunter: Hunter
-  index: string
+  index?: string
 }
 
 export default function HunterCard({
   hunter,
-  index,
+  index: _index,
 }: HunterCardProps) {
   const roleLabel = hunter.isLeader
     ? 'LEADER'

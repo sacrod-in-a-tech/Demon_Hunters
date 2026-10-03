@@ -26,7 +26,7 @@ export default function Navbar() {
         scrolled || open ? 'border-b border-[var(--color-line)] bg-black/70 backdrop-blur-xl' : 'border-b border-transparent bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Demon Hunters" className="h-10 w-10 object-contain" />
           <span className="font-[family-name:var(--font-display)] text-sm font-semibold tracking-[0.2em] text-white">

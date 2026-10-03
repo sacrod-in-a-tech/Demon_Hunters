@@ -16,8 +16,8 @@ const captains = hunters.filter((h) => h.isCaptain)
 
 export default function Members() {
   return (
-    <section id="hunters" className="relative border-t border-[var(--color-line)] py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="hunters" className="relative border-t border-[var(--color-line)] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading eyebrow="THE ROSTER" title="Meet the Hunters" />
 
@@ -33,7 +33,7 @@ export default function Members() {
         </div>
 
         {leader && (
-          <div className="mx-auto mt-14 max-w-6xl">
+          <div className="mx-auto mt-8 max-w-6xl lg:mt-10">
             <LeaderCard leader={leader} />
           </div>
         )}

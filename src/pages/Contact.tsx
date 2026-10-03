@@ -60,8 +60,8 @@ export default function Contact() {
         description="Connect with Demon Hunters, a cybersecurity initiative under Bytherix Technology, driven by research, exploration, and the pursuit of a more secure digital world."
       />
 
-      <section className="relative py-20">
-        <div className="mx-auto grid max-w-5xl gap-16 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+      <section className="relative py-12 sm:py-14 lg:py-16">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <Reveal>
             <div>
               <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold uppercase tracking-wide text-white">

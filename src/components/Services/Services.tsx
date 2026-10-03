@@ -5,11 +5,11 @@ import { capabilities } from '../../data/content'
 
 export default function Services() {
   return (
-    <section className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="CAPABILITIES" title="What We Do" />
 
-        <div className="mt-16 grid grid-cols-1 border border-[var(--color-line)] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 border border-[var(--color-line)] sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
           {capabilities.map((service, i) => (
             <Reveal
               key={service.index}

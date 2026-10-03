@@ -5,8 +5,8 @@ import logo from '../../assets/demon-hunters-logo.png'
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden py-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1fr_0.8fr] lg:px-10">
+    <section id="about" className="relative overflow-hidden py-12 sm:py-14 lg:py-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8">
         <div>
           <Reveal y={-16}>
             <div className="flex items-center gap-3">
@@ -24,7 +24,7 @@ export default function About() {
             </h2>
           </Reveal>
           <Reveal delay={0.16} y={-16}>
-            <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
+            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
               Demon Hunters is a cybersecurity-focused community built around curiosity, technical
               excellence, collaboration, and continuous learning.
             </p>
@@ -35,7 +35,7 @@ export default function About() {
             </p>
           </Reveal>
           <Reveal delay={0.24} y={-16}>
-            <div className="mt-10 grid max-w-xl grid-cols-2 gap-6 border-t border-[var(--color-line)] pt-8">
+            <div className="mt-8 grid max-w-xl grid-cols-2 gap-6 border-t border-[var(--color-line)] pt-8 sm:mt-10">
               <div>
                 <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.15em] text-white">Curiosity-driven</p>
                 <p className="mt-1 text-sm text-[var(--color-ash)]">We ask how systems break, not just how they work.</p>
@@ -49,7 +49,7 @@ export default function About() {
           <Reveal delay={0.3} y={-16}>
             <Link
               to="/about"
-              className="mt-10 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)]"
+              className="mt-8 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)] sm:mt-10"
             >
               READ THE FULL STORY
               <span>→</span>

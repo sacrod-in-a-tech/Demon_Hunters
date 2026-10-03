@@ -5,7 +5,7 @@ import { disclosureSteps } from '../../data/content'
 
 export default function BugBounty() {
   return (
-    <section className="relative overflow-hidden py-28">
+    <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
       <div className="pointer-events-none absolute inset-0 opacity-[0.05]" aria-hidden="true">
         <pre className="whitespace-pre-wrap p-10 font-mono text-[10px] leading-4 text-[var(--color-crimson-bright)]">
           {'01001000 01110101 01101110 01110100 00100000 01110100 01101000 01100101 00100000 01110100 01101000 01110010 01100101 01100001 01110100\n'.repeat(20)}
@@ -13,7 +13,7 @@ export default function BugBounty() {
       </div>
       <HUD variant="corners" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <Reveal>
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-[var(--color-crimson)]" />

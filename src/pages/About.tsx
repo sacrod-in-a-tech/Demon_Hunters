@@ -28,8 +28,8 @@ export default function About() {
         description="Demon Hunters is a cybersecurity-focused community built around curiosity, technical excellence, collaboration, and continuous learning."
       />
 
-      <section className="relative overflow-hidden py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1fr_0.8fr] lg:px-10">
+      <section className="relative overflow-hidden py-12 sm:py-14 lg:py-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8">
           <div>
             <Reveal>
               <p className="max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
@@ -58,9 +58,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative border-t border-[var(--color-line)] py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="grid grid-cols-1 gap-10 border-t border-[var(--color-line)] pt-14 sm:grid-cols-3">
+      <section className="relative border-t border-[var(--color-line)] py-12 sm:py-14 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 border-t border-[var(--color-line)] pt-8 sm:grid-cols-3 sm:gap-10 sm:pt-10">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 0.1}>
                 <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.3em] text-[var(--color-crimson-bright)]">

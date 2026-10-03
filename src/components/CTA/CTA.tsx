@@ -6,7 +6,7 @@ import Reveal from '../shared/Reveal'
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative overflow-hidden py-32">
+    <section id="contact" className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
       <motion.div
         initial={{ scale: 1.15, opacity: 0.4 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -21,7 +21,7 @@ export default function CTA() {
         <HUD className="inset-0" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-10">
+      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="font-[family-name:var(--font-display)] text-4xl font-semibold uppercase leading-[0.95] text-white sm:text-6xl md:text-7xl">
             Ready to Hunt

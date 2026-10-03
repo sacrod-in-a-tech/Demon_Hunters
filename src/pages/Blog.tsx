@@ -38,8 +38,8 @@ export default function Blog() {
         description="Write-ups, mindset, and lessons from the community — a running archive of security research and CTF experience."
       />
 
-      <section className="relative py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="relative py-12 sm:py-14 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 border-b border-[var(--color-line)] pb-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="relative w-full max-w-sm">
               <input
@@ -76,13 +76,13 @@ export default function Blog() {
           </div>
 
           {filtered.length === 0 ? (
-            <div className="mt-14 border border-dashed border-[var(--color-line)] px-6 py-16 text-center">
+            <div className="mt-8 border border-dashed border-[var(--color-line)] px-6 py-16 text-center lg:mt-10">
               <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.2em] text-[var(--color-ash)]">
                 NO ARTICLES MATCH YOUR SEARCH
               </p>
             </div>
           ) : (
-            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
               {filtered.map((post, index) => (
                 <Reveal
                   key={post.id}

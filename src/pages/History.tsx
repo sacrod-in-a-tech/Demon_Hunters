@@ -45,9 +45,9 @@ export default function History() {
         description="A year-by-year record of Demon Hunters' CTF and hackathon participation, from 2022 to 2026."
       />
 
-      <section className="relative py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mb-16 grid grid-cols-2 divide-x divide-y divide-[var(--color-line)] border border-[var(--color-line)] sm:grid-cols-4 sm:divide-y-0">
+      <section className="relative py-12 sm:py-14 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 grid grid-cols-2 divide-x divide-y divide-[var(--color-line)] border border-[var(--color-line)] sm:grid-cols-4 sm:divide-y-0">
             {stats.map((stat, i) => (
               <Reveal key={stat.label} delay={i * 0.06}>
                 <div className="flex flex-col items-center justify-center gap-1 px-4 py-8 text-center">
@@ -63,7 +63,7 @@ export default function History() {
             ))}
           </div>
 
-          <div className="mb-20">
+          <div className="mb-10">
             <Reveal>
               <div className="mb-8">
                 <span className="font-[family-name:var(--font-display)] text-[10px] tracking-[0.25em] text-[var(--color-crimson-bright)]">

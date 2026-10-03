@@ -11,8 +11,8 @@ export default function Achievements() {
   const lineInView = useInView(lineRef, { once: true, margin: '-100px' })
 
   return (
-    <section id="research" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="research" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
           <SectionHeading title="Focus Areas" />
           <Reveal delay={0.1}>
@@ -25,7 +25,7 @@ export default function Achievements() {
           </Reveal>
         </div>
 
-        <div className="relative mt-16">
+        <div className="relative mt-8 lg:mt-10">
           <div ref={lineRef} className="absolute left-0 right-0 top-6 hidden h-px overflow-hidden bg-[var(--color-line)] md:block">
             <motion.div
               initial={{ scaleX: 0 }}
@@ -59,7 +59,7 @@ export default function Achievements() {
         <Reveal delay={0.3}>
           <Link
             to="/research"
-            className="mt-14 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)]"
+            className="mt-8 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)]"
           >
             VIEW RESEARCH PAGE
             <span>→</span>

@@ -68,10 +68,10 @@ export default function Hunters() {
         description="A professional directory of Demon Hunters personnel, organized by division. Select a division to view its actual roster."
       />
 
-      <section className="relative py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="relative py-12 sm:py-14 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {leader && (
-            <div className="mb-16">
+            <div className="mb-10">
               <LeaderCard leader={leader} />
             </div>
           )}
@@ -108,7 +108,7 @@ export default function Hunters() {
                 duration: 0.3,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-14"
+              className="mt-8 lg:mt-10"
             >
               {active !== 'all' && activeDivision && (
                 <div className="mb-8">
@@ -132,7 +132,7 @@ export default function Hunters() {
               )}
 
               {active === 'all' && grouped ? (
-                <div className="flex flex-col gap-14">
+                <div className="flex flex-col gap-8 lg:gap-10">
                   {grouped.map(
                     ({ division, members }) => (
                       <div key={division.id}>

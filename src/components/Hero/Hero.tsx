@@ -33,7 +33,7 @@ export default function Hero() {
       id="home"
       ref={sectionRef}
       onMouseMove={onMouseMove}
-      className="relative flex min-h-screen items-center overflow-hidden pt-28"
+      className="relative flex min-h-screen items-center overflow-hidden pt-20 sm:pt-24"
     >
       {/* red glow layer — drifts opposite the logo for a parallax camera feel */}
       <motion.div
@@ -47,7 +47,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-14 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -61,7 +61,7 @@ export default function Hero() {
             </span> */}
           </motion.div>
 
-          <h1 className="mt-6 font-[family-name:var(--font-display)] text-[15vw] font-semibold uppercase leading-[0.85] text-white sm:text-7xl md:text-8xl lg:text-8xl">
+          <h1 className="mt-5 font-[family-name:var(--font-display)] text-[15vw] font-semibold uppercase leading-[0.85] text-white sm:text-7xl md:text-8xl lg:text-8xl">
             {headingWords.map((word, i) => (
               <motion.span
                 key={word}
@@ -85,7 +85,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.55 }}
-            className="mt-8 max-w-md text-[15px] leading-relaxed text-[var(--color-ash)]"
+            className="mt-6 max-w-md text-[15px] leading-relaxed text-[var(--color-ash)]"
           >
             A cybersecurity community dedicated to discovering vulnerabilities, developing security
             knowledge, competing in security challenges, and building a safer digital future.
@@ -95,7 +95,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-8 flex flex-wrap items-center gap-4"
           >
             <Link
               to="/divisions"
@@ -112,7 +112,7 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          <HUDStatus className="mt-12 hidden sm:block" />
+          <HUDStatus className="mt-10 hidden sm:block" />
         </div>
 
         <motion.div

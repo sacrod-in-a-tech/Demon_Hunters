@@ -9,13 +9,13 @@ interface LeaderCardProps {
 export default function LeaderCard({ leader }: LeaderCardProps) {
   return (
     <Reveal>
-      <div className="relative overflow-hidden border border-[var(--color-line-red)] bg-[var(--color-charcoal)] p-8 sm:p-12">
+      <div className="relative overflow-hidden border border-[var(--color-line-red)] bg-[var(--color-charcoal)] p-3 sm:p-5">
         <HUD variant="corners" />
         <div
           className="pointer-events-none absolute -right-1/4 -top-1/4 h-[60%] w-[60%] rounded-full opacity-20 blur-[100px]"
           style={{ background: 'radial-gradient(circle, var(--color-crimson) 0%, transparent 70%)' }}
         />
-        <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+        <div className="relative flex flex-col items-start gap-3 sm:flex-row sm:items-center">
           <div className="flex h-20 w-20 shrink-0 items-center justify-center border border-[var(--color-line-red)] font-[family-name:var(--font-display)] text-2xl font-semibold text-[var(--color-crimson-bright)]">
             AP
           </div>

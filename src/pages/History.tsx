@@ -45,12 +45,12 @@ export default function History() {
         description="A year-by-year record of Demon Hunters' CTF and hackathon participation, from 2022 to 2026."
       />
 
-      <section className="relative py-12 sm:py-14 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 grid grid-cols-2 divide-x divide-y divide-[var(--color-line)] border border-[var(--color-line)] sm:grid-cols-4 sm:divide-y-0">
+      <section className="section-spacing relative">
+        <div className="site-container">
+          <div className="mb-6 grid grid-cols-2 divide-x divide-y divide-[var(--color-line)] border border-[var(--color-line)] sm:grid-cols-4 sm:divide-y-0">
             {stats.map((stat, i) => (
               <Reveal key={stat.label} delay={i * 0.06}>
-                <div className="flex flex-col items-center justify-center gap-1 px-4 py-8 text-center">
+                <div className="flex flex-col items-center justify-center gap-1 px-2 py-4 text-center sm:px-3 sm:py-5">
                   <span className="font-[family-name:var(--font-display)] text-3xl font-semibold text-white sm:text-4xl">
                     {stat.value}
                   </span>
@@ -63,9 +63,9 @@ export default function History() {
             ))}
           </div>
 
-          <div className="mb-10">
+          <div className="mb-4">
             <Reveal>
-              <div className="mb-8">
+              <div className="mb-6">
                 <span className="font-[family-name:var(--font-display)] text-[10px] tracking-[0.25em] text-[var(--color-crimson-bright)]">
                   SELECTED RESULTS
                 </span>
@@ -74,20 +74,20 @@ export default function History() {
                   Achievements
                 </h2>
 
-                <p className="mt-3 max-w-2xl text-sm leading-7 text-[var(--color-ash)]">
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--color-ash)]">
                   Selected competitive results and notable placements from
                   Demon Hunters' journey.
                 </p>
               </div>
             </Reveal>
 
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-3 sm:gap-4">
               {achievements.map((achievement, i) => {
                 const Icon = achievement.icon
 
                 return (
                   <Reveal key={achievement.title} delay={i * 0.08} y={16}>
-                    <div className="group relative overflow-hidden border border-[var(--color-line)] bg-white/[0.02] p-6 transition-all duration-300 hover:border-[var(--color-line-red)] hover:bg-white/[0.04]">
+                    <div className="group relative overflow-hidden border border-[var(--color-line)] bg-white/[0.02] p-5 transition-all duration-300 hover:border-[var(--color-line-red)] hover:bg-white/[0.04]">
                       <div
                         className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[var(--color-crimson)]/10 blur-3xl transition-opacity duration-300 group-hover:opacity-100"
                         aria-hidden="true"
@@ -103,7 +103,7 @@ export default function History() {
                         </span>
                       </div>
 
-                      <div className="relative mt-8">
+                      <div className="relative mt-4">
                         <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-wide text-white">
                           {achievement.title}
                         </h3>
@@ -129,4 +129,3 @@ export default function History() {
     </>
   )
 }
-

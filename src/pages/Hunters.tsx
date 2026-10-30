@@ -68,10 +68,10 @@ export default function Hunters() {
         description="A professional directory of Demon Hunters personnel, organized by division. Select a division to view its actual roster."
       />
 
-      <section className="relative py-12 sm:py-14 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="section-spacing relative">
+        <div className="site-container">
           {leader && (
-            <div className="mb-10">
+            <div className="mb-6">
               <LeaderCard leader={leader} />
             </div>
           )}
@@ -108,7 +108,7 @@ export default function Hunters() {
                 duration: 0.3,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-8 lg:mt-10"
+              className="mt-6 lg:mt-8"
             >
               {active !== 'all' && activeDivision && (
                 <div className="mb-8">
@@ -124,7 +124,7 @@ export default function Hunters() {
               )}
 
               {filtered.length === 0 && (
-                <div className="border border-dashed border-[var(--color-line)] px-6 py-16 text-center">
+                <div className="border border-dashed border-[var(--color-line)] px-4 py-10 text-center">
                   <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.2em] text-[var(--color-ash)]">
                     NO HUNTERS ASSIGNED TO THIS DIVISION YET
                   </p>
@@ -132,11 +132,11 @@ export default function Hunters() {
               )}
 
               {active === 'all' && grouped ? (
-                <div className="flex flex-col gap-8 lg:gap-10">
+                <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8">
                   {grouped.map(
                     ({ division, members }) => (
                       <div key={division.id}>
-                        <div className="mb-5 flex items-baseline gap-3 border-b border-[var(--color-line)] pb-3">
+                        <div className="mb-4 flex items-baseline gap-2 border-b border-[var(--color-line)] pb-2 sm:gap-3 sm:pb-3">
                           <span className="font-[family-name:var(--font-display)] text-sm text-[var(--color-crimson-bright)]">
                             {division.number}
                           </span>
@@ -146,7 +146,7 @@ export default function Hunters() {
                           </h3>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+                        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
                           {members.map((hunter, i) => (
                             <Reveal
                               key={hunter.name}
@@ -164,7 +164,7 @@ export default function Hunters() {
                   )}
                 </div>
               ) : (
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
                   {filtered.map((hunter, i) => (
                     <Reveal
                       key={hunter.name}

@@ -13,9 +13,9 @@ export default function Research() {
         description="Demon Hunters focuses its research energy on practical, testable security work — competitive, independent, and community-facing."
       />
 
-      <section className="relative py-14 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex flex-wrap items-baseline gap-x-10 gap-y-4 border-b border-[var(--color-line)] pb-8">
+      <section className="section-spacing relative">
+        <div className="site-container">
+          <div className="mb-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 border-b border-[var(--color-line)] pb-4">
             <div>
               <span className="font-[family-name:var(--font-display)] text-4xl font-semibold text-white">{totalEvents}</span>
               <span className="ml-2 font-[family-name:var(--font-display)] text-xs tracking-[0.2em] text-[var(--color-ash)]">
@@ -30,16 +30,16 @@ export default function Research() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
             {researchAreas.map((item, i) => (
               <Reveal key={item.category} delay={(i % 3) * 0.08}>
                 <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.3em] text-[var(--color-crimson-bright)]">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="mt-4 font-[family-name:var(--font-display)] text-xl font-semibold uppercase tracking-wide text-white">
+                <h3 className="mt-3 font-[family-name:var(--font-display)] text-xl font-semibold uppercase tracking-wide text-white">
                   {item.category}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--color-ash)]">{item.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-ash)]">{item.description}</p>
               </Reveal>
             ))}
           </div>

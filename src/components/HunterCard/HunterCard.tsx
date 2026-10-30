@@ -23,7 +23,7 @@ export default function HunterCard({
 
   return (
     <TiltCard maxTilt={5} className="h-full">
-      <div className="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden border border-[var(--color-line)] bg-[var(--color-charcoal)] p-5 transition-colors duration-300 hover:border-[var(--color-line-red)]">
+      <div className="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden border border-[var(--color-line)] bg-[var(--color-charcoal)] p-4 transition-colors duration-300 hover:border-[var(--color-line-red)] sm:p-5">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px w-full origin-left scale-x-0 bg-[var(--color-crimson-bright)] transition-transform duration-500 group-hover:scale-x-100" />
 
         <div className="pointer-events-none absolute inset-x-0 top-0 flex h-[62%] items-center justify-center overflow-hidden">

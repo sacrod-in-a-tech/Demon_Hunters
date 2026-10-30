@@ -28,8 +28,8 @@ export default function About() {
         description="Demon Hunters is a cybersecurity-focused community built around curiosity, technical excellence, collaboration, and continuous learning."
       />
 
-      <section className="relative overflow-hidden py-12 sm:py-14 lg:py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8">
+      <section className="section-spacing relative overflow-hidden">
+        <div className="site-container grid items-center gap-6 lg:grid-cols-[1fr_0.8fr]">
           <div>
             <Reveal>
               <p className="max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
@@ -37,7 +37,7 @@ export default function About() {
                 knowledge, and challenge ourselves to become better security practitioners &mdash; one
                 vulnerability, one report, one competition at a time.
               </p>
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
+              <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
                 The organization is structured around six specialized technical divisions, each led by a
                 captain and reporting to the overall Demon Hunters leadership. That structure keeps the
                 work focused while still letting hunters cross into other divisions as a challenge demands.
@@ -49,7 +49,7 @@ export default function About() {
               className="absolute inset-0 -z-10 rounded-full opacity-30 blur-[100px]"
               style={{ background: 'radial-gradient(circle, var(--color-crimson) 0%, transparent 70%)' }}
             />
-            <div className="relative border border-[var(--color-line-red)] p-10">
+            <div className="relative border border-[var(--color-line-red)] p-3 sm:p-5">
               <HUD variant="corners" />
               <div className="pointer-events-none absolute -inset-px border border-white/5" />
               <img src={logo} alt="Demon Hunters" className="w-full opacity-95" />
@@ -58,18 +58,18 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative border-t border-[var(--color-line)] py-12 sm:py-14 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 border-t border-[var(--color-line)] pt-8 sm:grid-cols-3 sm:gap-10 sm:pt-10">
+      <section className="section-spacing relative border-t border-[var(--color-line)]">
+        <div className="site-container">
+          <div className="grid grid-cols-1 gap-4 border-t border-[var(--color-line)] pt-4 sm:grid-cols-3 sm:gap-6 sm:pt-6">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 0.1}>
                 <span className="font-[family-name:var(--font-display)] text-xs tracking-[0.3em] text-[var(--color-crimson-bright)]">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="mt-4 font-[family-name:var(--font-display)] text-xl font-semibold uppercase tracking-wide text-white">
+                <h3 className="mt-3 font-[family-name:var(--font-display)] text-xl font-semibold uppercase tracking-wide text-white">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--color-ash)]">{pillar.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-ash)]">{pillar.body}</p>
               </Reveal>
             ))}
           </div>

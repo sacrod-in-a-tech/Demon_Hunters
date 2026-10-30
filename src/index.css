@@ -18,6 +18,31 @@
   --color-ash: #9a9a9a;
 }
 
+:root {
+  --site-max-width: 80rem;
+  --site-gutter: clamp(0.5rem, 2.5vw, 2rem);
+  --section-space: clamp(1.5rem, 4vw, 3rem);
+}
+
+.site-container {
+  width: calc(100% - var(--site-gutter) - var(--site-gutter));
+  max-width: var(--site-max-width);
+  margin-inline: auto;
+}
+
+.site-container-narrow {
+  max-width: 56rem;
+}
+
+.section-spacing {
+  padding-block: var(--section-space);
+}
+
+.page-header-spacing {
+  padding-top: clamp(4.5rem, 6vw, 5.75rem);
+  padding-bottom: clamp(1.25rem, 2vw, 2rem);
+}
+
 html {
   scroll-behavior: smooth;
 }

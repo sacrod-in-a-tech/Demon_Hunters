@@ -14,9 +14,9 @@ import { history, totalEvents, yearsActive } from '../data/history'
 function HistoryPreview() {
   const latest = history[0]
   return (
-    <section className="relative border-t border-[var(--color-line)] py-14 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+    <section className="section-spacing relative border-t border-[var(--color-line)]">
+      <div className="site-container">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="HISTORY"
             title={`${latest.year} Season`}
@@ -33,10 +33,10 @@ function HistoryPreview() {
           </Reveal>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3">
           {latest.events.slice(0, 6).map((event, i) => (
             <Reveal key={event} delay={i * 0.05} y={12} blur={false}>
-              <div className="flex items-center gap-4 border border-[var(--color-line)] px-5 py-4 transition-colors duration-300 hover:border-[var(--color-line-red)]">
+              <div className="flex items-center gap-4 border border-[var(--color-line)] px-4 py-3 transition-colors duration-300 hover:border-[var(--color-line-red)]">
                 <span className="font-[family-name:var(--font-display)] text-xs text-[var(--color-crimson-bright)]">
                   {String(i + 1).padStart(2, '0')}
                 </span>

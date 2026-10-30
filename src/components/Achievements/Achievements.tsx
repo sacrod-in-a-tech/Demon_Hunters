@@ -11,9 +11,9 @@ export default function Achievements() {
   const lineInView = useInView(lineRef, { once: true, margin: '-100px' })
 
   return (
-    <section id="research" className="relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px] py-14 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
+    <section id="research" className="section-spacing relative border-t border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px]">
+      <div className="site-container">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading title="Focus Areas" />
           <Reveal delay={0.1}>
             <div className="flex items-baseline gap-3 border-l border-[var(--color-line-red)] pl-4">
@@ -25,7 +25,7 @@ export default function Achievements() {
           </Reveal>
         </div>
 
-        <div className="relative mt-8 lg:mt-10">
+        <div className="relative mt-6 lg:mt-8">
           <div ref={lineRef} className="absolute left-0 right-0 top-6 hidden h-px overflow-hidden bg-[var(--color-line)] md:block">
             <motion.div
               initial={{ scaleX: 0 }}
@@ -36,10 +36,10 @@ export default function Achievements() {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {researchAreas.map((item, i) => (
               <Reveal key={item.category} delay={0.15 + i * 0.1}>
-                <div className="group relative pt-8">
+                <div className="group relative pt-5">
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={lineInView ? { scale: 1 } : {}}
@@ -59,7 +59,7 @@ export default function Achievements() {
         <Reveal delay={0.3}>
           <Link
             to="/research"
-            className="mt-8 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)]"
+            className="mt-6 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)]"
           >
             VIEW RESEARCH PAGE
             <span>→</span>

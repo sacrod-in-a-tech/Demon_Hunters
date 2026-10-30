@@ -36,7 +36,7 @@ export default function HistoryTimeline() {
         })}
       </div>
 
-      <div className="relative mt-8 lg:mt-10">
+      <div className="relative mt-4 lg:mt-6">
         <div
           className="absolute left-[7px] top-2 bottom-2 w-px bg-[var(--color-line)] sm:left-[9px]"
           aria-hidden="true"
@@ -67,7 +67,7 @@ export default function HistoryTimeline() {
                   aria-hidden="true"
                 />
 
-                <div className="border-b border-[var(--color-line)] py-4">
+                <div className="border-b border-[var(--color-line)] py-3">
                   <span className="font-[family-name:var(--font-display)] text-base font-medium tracking-wide text-white sm:text-lg">
                     {event}
                   </span>
@@ -80,4 +80,3 @@ export default function HistoryTimeline() {
     </div>
   )
 }
-

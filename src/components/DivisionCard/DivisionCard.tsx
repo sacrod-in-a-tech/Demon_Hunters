@@ -12,7 +12,7 @@ export default function DivisionCard({ division, memberCount }: DivisionCardProp
     <TiltCard maxTilt={3} className="h-full">
       <Link
         to={`/hunters?division=${division.id}`}
-        className="group flex h-full flex-col justify-between border border-[var(--color-line)] p-8 transition-all duration-300 hover:border-[var(--color-line-red)] hover:bg-white/[0.02]"
+        className="group flex h-full flex-col justify-between border border-[var(--color-line)] p-3 transition-all duration-300 hover:border-[var(--color-line-red)] hover:bg-white/[0.02] sm:p-4"
       >
         <span className="pointer-events-none absolute right-0 top-0 h-0 w-px bg-[var(--color-crimson-bright)] transition-all duration-500 group-hover:h-full" />
         <div>
@@ -24,13 +24,13 @@ export default function DivisionCard({ division, memberCount }: DivisionCardProp
               VIEW ROSTER →
             </span>
           </div>
-          <h3 className="mt-6 font-[family-name:var(--font-display)] text-xl font-semibold uppercase tracking-wide text-white sm:text-2xl">
+          <h3 className="mt-3 font-[family-name:var(--font-display)] text-xl font-semibold uppercase tracking-wide text-white sm:text-2xl">
             {division.name}
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-[var(--color-ash)]">{division.description}</p>
         </div>
 
-        <div className="mt-8 flex items-center gap-4 border-t border-[var(--color-line)] pt-5 text-xs">
+        <div className="mt-4 flex items-center gap-3 border-t border-[var(--color-line)] pt-3 text-xs">
           <span className="font-[family-name:var(--font-display)] tracking-[0.15em] text-white/70">
             {division.captain ? `CAPTAIN — ${division.captain.toUpperCase()}` : 'CAPTAIN — UNASSIGNED'}
           </span>

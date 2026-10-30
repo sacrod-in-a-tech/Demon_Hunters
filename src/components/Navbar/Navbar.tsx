@@ -26,7 +26,7 @@ export default function Navbar() {
         scrolled || open ? 'border-b border-[var(--color-line)] bg-black/70 backdrop-blur-xl' : 'border-b border-transparent bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div className="site-container flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Demon Hunters" className="h-10 w-10 object-contain" />
           <span className="font-[family-name:var(--font-display)] text-sm font-semibold tracking-[0.2em] text-white">
@@ -95,7 +95,7 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden border-t border-[var(--color-line)] bg-black/95 backdrop-blur-xl lg:hidden"
           >
-            <nav className="flex flex-col gap-1 px-6 py-4">
+            <nav className="flex flex-col gap-1 px-3 py-3">
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}

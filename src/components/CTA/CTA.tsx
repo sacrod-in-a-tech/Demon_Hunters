@@ -6,7 +6,7 @@ import Reveal from '../shared/Reveal'
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
+    <section id="contact" className="section-spacing relative overflow-hidden">
       <motion.div
         initial={{ scale: 1.15, opacity: 0.4 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -21,7 +21,7 @@ export default function CTA() {
         <HUD className="inset-0" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="site-container site-container-narrow relative text-center">
         <Reveal>
           <h2 className="font-[family-name:var(--font-display)] text-4xl font-semibold uppercase leading-[0.95] text-white sm:text-6xl md:text-7xl">
             Ready to Hunt
@@ -30,21 +30,21 @@ export default function CTA() {
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mx-auto mt-6 max-w-lg text-[15px] leading-relaxed text-[var(--color-ash)]">
+          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-[var(--color-ash)]">
             Explore cybersecurity. Build your skills. Discover vulnerabilities. Protect the future.
           </p>
         </Reveal>
         <Reveal delay={0.2}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="bg-[var(--color-crimson)] px-8 py-4 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.2em] text-white transition-all hover:bg-[var(--color-crimson-bright)] hover:shadow-[0_0_35px_rgba(255,26,26,0.45)]"
+              className="bg-[var(--color-crimson)] px-4 py-3 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.2em] text-white transition-all hover:bg-[var(--color-crimson-bright)] hover:shadow-[0_0_35px_rgba(255,26,26,0.45)] sm:px-6 sm:py-3.5"
             >
               GET IN TOUCH
             </Link>
             <Link
               to="/divisions"
-              className="border border-[var(--color-line)] px-8 py-4 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.2em] text-white/90 transition-all hover:border-[var(--color-crimson-bright)] hover:text-white"
+              className="border border-[var(--color-line)] px-4 py-3 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.2em] text-white/90 transition-all hover:border-[var(--color-crimson-bright)] hover:text-white sm:px-6 sm:py-3.5"
             >
               EXPLORE OUR WORK
             </Link>

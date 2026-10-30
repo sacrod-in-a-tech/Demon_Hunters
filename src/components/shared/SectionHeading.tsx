@@ -17,14 +17,14 @@ export default function SectionHeading({ eyebrow: _eyebrow, title, align = 'left
         </span> */}
       </div>
       <h2
-        className={`mt-3 font-[family-name:var(--font-display)] font-semibold uppercase leading-[0.95] text-white sm:mt-4 ${
+        className={`mt-2 font-[family-name:var(--font-display)] font-semibold uppercase leading-[0.95] text-white sm:mt-3 ${
           align === 'center' ? 'text-4xl sm:text-5xl md:text-6xl' : 'text-3xl sm:text-4xl md:text-5xl'
         }`}
       >
         {title}
       </h2>
       {description && (
-        <p className={`mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)] ${align === 'center' ? 'mx-auto' : ''}`}>
+        <p className={`mt-3 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)] ${align === 'center' ? 'mx-auto' : ''}`}>
           {description}
         </p>
       )}

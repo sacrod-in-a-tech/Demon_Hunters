@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   const fieldClass = (hasError: boolean) =>
-    `w-full border bg-transparent px-4 py-3 text-sm text-white placeholder:text-[var(--color-ash)] focus:outline-none ${
+    `w-full border bg-transparent px-3 py-2.5 text-sm text-white placeholder:text-[var(--color-ash)] focus:outline-none sm:px-4 sm:py-3 ${
       hasError ? 'border-[var(--color-crimson-bright)]' : 'border-[var(--color-line)] focus:border-[var(--color-line-red)]'
     }`
 
@@ -60,8 +60,8 @@ export default function Contact() {
         description="Connect with Demon Hunters, a cybersecurity initiative under Bytherix Technology, driven by research, exploration, and the pursuit of a more secure digital world."
       />
 
-      <section className="relative py-12 sm:py-14 lg:py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+      <section className="section-spacing relative">
+        <div className="site-container grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <div>
               <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold uppercase tracking-wide text-white">
@@ -70,7 +70,7 @@ export default function Contact() {
               <p className="mt-3 max-w-xs text-sm leading-relaxed text-[var(--color-ash)]">
                 Follow along or reach out directly through any of these channels.
               </p>
-              <div className="mt-6 flex flex-col gap-3">
+              <div className="mt-4 flex flex-col gap-2">
                 {socials.map((social) => (
                   <a
                     key={social.label}
@@ -86,7 +86,7 @@ export default function Contact() {
 
           <Reveal delay={0.1}>
             {status === 'submitted' ? (
-              <div className="border border-[var(--color-line-red)] bg-[var(--color-crimson)]/5 px-6 py-10 text-center">
+              <div className="border border-[var(--color-line-red)] bg-[var(--color-crimson)]/5 px-4 py-7 text-center sm:px-6 sm:py-8">
                 <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.2em] text-white">
                   MESSAGE READY TO SEND
                 </p>
@@ -101,7 +101,7 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
                 <div>
                   <label htmlFor="name" className="mb-2 block font-[family-name:var(--font-display)] text-[10px] tracking-[0.2em] text-[var(--color-ash)]">
                     NAME
@@ -164,7 +164,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="mt-2 w-fit bg-[var(--color-crimson)] px-8 py-3.5 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.2em] text-white transition-all hover:bg-[var(--color-crimson-bright)] hover:shadow-[0_0_30px_rgba(255,26,26,0.4)]"
+                  className="mt-2 w-fit bg-[var(--color-crimson)] px-6 py-3 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.2em] text-white transition-all hover:bg-[var(--color-crimson-bright)] hover:shadow-[0_0_30px_rgba(255,26,26,0.4)] sm:px-8 sm:py-3.5"
                 >
                   SEND MESSAGE
                 </button>

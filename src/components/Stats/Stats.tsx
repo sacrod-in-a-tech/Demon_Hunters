@@ -10,12 +10,12 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="relative border-y border-[var(--color-line)] bg-[var(--color-charcoal)]/70 py-14 backdrop-blur-[2px] sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="section-spacing relative border-y border-[var(--color-line)] bg-[var(--color-charcoal)]/70 backdrop-blur-[2px]">
+      <div className="site-container">
         <div className="grid grid-cols-2 divide-x divide-y divide-[var(--color-line)] border border-[var(--color-line)] md:grid-cols-4 md:divide-y-0">
           {stats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.08}>
-              <div className="group relative flex flex-col items-center justify-center gap-2 px-6 py-10 text-center transition-colors hover:bg-white/[0.02]">
+              <div className="group relative flex flex-col items-center justify-center gap-2 px-2 py-4 text-center transition-colors hover:bg-white/[0.02] sm:px-3 sm:py-6">
                 <div
                   className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   style={{

@@ -38,9 +38,9 @@ export default function Blog() {
         description="Write-ups, mindset, and lessons from the community — a running archive of security research and CTF experience."
       />
 
-      <section className="relative py-12 sm:py-14 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-6 border-b border-[var(--color-line)] pb-8 sm:flex-row sm:items-center sm:justify-between">
+      <section className="section-spacing relative">
+        <div className="site-container">
+          <div className="flex flex-col gap-3 border-b border-[var(--color-line)] pb-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:pb-6">
             <div className="relative w-full max-w-sm">
               <input
                 type="text"
@@ -48,7 +48,7 @@ export default function Blog() {
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="SEARCH ARTICLES..."
                 aria-label="Search articles"
-                className="w-full border border-[var(--color-line)] bg-transparent px-4 py-3 font-[family-name:var(--font-display)] text-xs tracking-[0.1em] text-white placeholder:text-[var(--color-ash)] focus:border-[var(--color-crimson-bright)] focus:outline-none"
+                className="w-full border border-[var(--color-line)] bg-transparent px-3 py-2.5 font-[family-name:var(--font-display)] text-xs tracking-[0.1em] text-white placeholder:text-[var(--color-ash)] focus:border-[var(--color-crimson-bright)] focus:outline-none sm:px-4 sm:py-3"
               />
             </div>
 
@@ -62,7 +62,7 @@ export default function Blog() {
                     type="button"
                     onClick={() => setCategory(cat)}
                     aria-pressed={isActive}
-                    className={`border px-3.5 py-2 font-[family-name:var(--font-display)] text-[10px] tracking-[0.15em] transition-all duration-300 ${
+                    className={`border px-3 py-1.5 font-[family-name:var(--font-display)] text-[10px] tracking-[0.15em] transition-all duration-300 sm:px-3.5 sm:py-2 ${
                       isActive
                         ? 'border-[var(--color-crimson-bright)] bg-[var(--color-crimson)]/10 text-white'
                         : 'border-[var(--color-line)] text-[var(--color-ash)] hover:border-[var(--color-line-red)] hover:text-white'
@@ -76,13 +76,13 @@ export default function Blog() {
           </div>
 
           {filtered.length === 0 ? (
-            <div className="mt-8 border border-dashed border-[var(--color-line)] px-6 py-16 text-center lg:mt-10">
+            <div className="mt-4 border border-dashed border-[var(--color-line)] px-3 py-7 text-center lg:mt-6 sm:px-4 sm:py-8">
               <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.2em] text-[var(--color-ash)]">
                 NO ARTICLES MATCH YOUR SEARCH
               </p>
             </div>
           ) : (
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3">
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-6 lg:grid-cols-3">
               {filtered.map((post, index) => (
                 <Reveal
                   key={post.id}
@@ -92,9 +92,9 @@ export default function Blog() {
                     maxTilt={3}
                     className="h-full"
                   >
-                    <article className="group flex h-full flex-col justify-between border border-[var(--color-line)] p-6 transition-all duration-300 hover:border-[var(--color-line-red)] hover:bg-white/[0.02]">
+                    <article className="group flex h-full flex-col justify-between border border-[var(--color-line)] p-3 transition-all duration-300 hover:border-[var(--color-line-red)] hover:bg-white/[0.02] sm:p-4">
                       <div>
-                        <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center justify-between gap-2 sm:gap-4">
                           <span className="font-[family-name:var(--font-display)] text-[10px] tracking-[0.25em] text-[var(--color-crimson-bright)]">
                             {post.category.toUpperCase()}
                           </span>
@@ -104,7 +104,7 @@ export default function Blog() {
                           </span>
                         </div>
 
-                        <h3 className="mt-4 font-[family-name:var(--font-display)] text-lg font-semibold leading-snug text-white">
+                        <h3 className="mt-3 font-[family-name:var(--font-display)] text-lg font-semibold leading-snug text-white">
                           {post.title}
                         </h3>
 
@@ -113,7 +113,7 @@ export default function Blog() {
                         </p>
                       </div>
 
-                      <div className="mt-6 flex items-center justify-between border-t border-[var(--color-line)] pt-4">
+                      <div className="mt-4 flex items-center justify-between border-t border-[var(--color-line)] pt-3">
                         <span className="text-xs text-[var(--color-ash)]">
                           {post.date}
                         </span>

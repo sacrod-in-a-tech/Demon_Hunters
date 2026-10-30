@@ -5,8 +5,8 @@ import logo from '../../assets/demon-hunters-logo.png'
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden py-12 sm:py-14 lg:py-16">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8">
+    <section id="about" className="section-spacing relative overflow-hidden">
+      <div className="site-container grid items-center gap-6 lg:grid-cols-[1fr_0.8fr]">
         <div>
           <Reveal y={-16}>
             <div className="flex items-center gap-3">
@@ -24,18 +24,18 @@ export default function About() {
             </h2>
           </Reveal>
           <Reveal delay={0.16} y={-16}>
-            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
               Demon Hunters is a cybersecurity-focused community built around curiosity, technical
               excellence, collaboration, and continuous learning.
             </p>
-            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
+            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-[var(--color-ash)]">
               We explore the systems behind modern technology, identify weaknesses, develop defensive
               knowledge, and challenge ourselves to become better security practitioners &mdash; one
               vulnerability, one report, one competition at a time.
             </p>
           </Reveal>
           <Reveal delay={0.24} y={-16}>
-            <div className="mt-8 grid max-w-xl grid-cols-2 gap-6 border-t border-[var(--color-line)] pt-8 sm:mt-10">
+            <div className="mt-6 grid max-w-xl grid-cols-2 gap-4 border-t border-[var(--color-line)] pt-6 sm:mt-8">
               <div>
                 <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.15em] text-white">Curiosity-driven</p>
                 <p className="mt-1 text-sm text-[var(--color-ash)]">We ask how systems break, not just how they work.</p>
@@ -49,7 +49,7 @@ export default function About() {
           <Reveal delay={0.3} y={-16}>
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)] sm:mt-10"
+              className="mt-6 inline-flex items-center gap-2 font-[family-name:var(--font-display)] text-xs font-semibold tracking-[0.18em] text-white transition-colors hover:text-[var(--color-crimson-bright)] sm:mt-8"
             >
               READ THE FULL STORY
               <span>→</span>
@@ -59,7 +59,7 @@ export default function About() {
 
         <Reveal delay={0.2} y={24} scale className="relative mx-auto w-full max-w-sm">
           <div className="absolute inset-0 -z-10 rounded-full opacity-30 blur-[100px]" style={{ background: 'radial-gradient(circle, var(--color-crimson) 0%, transparent 70%)' }} />
-          <div className="relative border border-[var(--color-line-red)] p-10">
+          <div className="relative border border-[var(--color-line-red)] p-3 sm:p-5">
             <HUD variant="corners" />
             <div className="pointer-events-none absolute -inset-px border border-white/5" />
             <img src={logo} alt="Demon Hunters" className="w-full opacity-95" />

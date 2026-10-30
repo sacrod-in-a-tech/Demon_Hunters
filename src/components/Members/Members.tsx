@@ -16,9 +16,9 @@ const captains = hunters.filter((h) => h.isCaptain)
 
 export default function Members() {
   return (
-    <section id="hunters" className="relative border-t border-[var(--color-line)] py-14 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+    <section id="hunters" className="section-spacing relative border-t border-[var(--color-line)]">
+      <div className="site-container">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading eyebrow="THE ROSTER" title="Meet the Hunters" />
 
           <Reveal delay={0.1}>
@@ -33,13 +33,13 @@ export default function Members() {
         </div>
 
         {leader && (
-          <div className="mx-auto mt-8 max-w-6xl lg:mt-10">
+          <div className="mx-auto mt-4 max-w-6xl lg:mt-6">
             <LeaderCard leader={leader} />
           </div>
         )}
 
         {captains.length > 0 && (
-          <div className="mx-auto mt-8 grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mx-auto mt-4 grid max-w-6xl grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:mt-6 lg:grid-cols-5">
             {captains.map((captain, i) => (
               <Reveal key={captain.name} delay={i * 0.06}>
                 <HunterCard
